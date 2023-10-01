@@ -13,8 +13,8 @@ public class Ej031 {
             
         while((dia<5) && !(p.getNombre().equals(corte))){
             p = new Persona(); //instancia de clase
-            System.out.print(" Nombre: ");
-            p.setNombre(Lector.leerString()); //asignacion (...)
+            System.out.print(" Nombre: ");  //asignacion (...)
+            p.setNombre(Lector.leerString()); 
             System.out.print(" DNI: ");
             p.setDNI(Lector.leerInt());
             System.out.print(" Edad: ");
