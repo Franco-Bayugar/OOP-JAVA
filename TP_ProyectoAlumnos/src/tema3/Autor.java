@@ -45,7 +45,7 @@ public class Autor {
 
     @Override
     public String toString() {
-        return "Autor{" + "nombre=" + nombre + ", biografia=" + biografia + ", origen=" + origen + '}';
+        return ("{"+"Nombre: "+this.nombre+", Biografia: "+this.biografia+", Origen: "+this.origen+"}");
     }
     
     

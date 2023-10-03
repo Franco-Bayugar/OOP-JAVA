@@ -87,6 +87,11 @@ public class Libro {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+
+    @Override
+    public String toString() {
+        return ("\ntitulo: "+this.titulo+"\nautor: "+this.autor+"\neditorial: "+this.editorial+"\na\u00f1o edicion: "+añoEdicion+"\nISBN: "+ISBN+"\nprecio: "+precio);
+    }
         
    
     
