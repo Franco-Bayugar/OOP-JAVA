@@ -7,17 +7,16 @@ import PaqueteLectura.GeneradorAleatorio;
 public class Ej03 {
 
     public static void main(String[] args) {
-        //variables
-        int dimf = 2; int n;
+        //variables       
         System.out.println("Generar estante de n posiciones, n: ");
-        n = Lector.leerInt();
+        int n = Lector.leerInt();
         Estante e = new Estante(n);
         
         Libro l = new Libro();
         Autor a = new Autor();
         
         //p.p
-        
+        //instanciacion 
         e = new Estante(n); 
         //INSTANCIAR EL OBJETO MAYOR FUERA DEL ITERACIONAL   
         do{
@@ -45,7 +44,6 @@ public class Ej03 {
         System.out.println("Cantidad libros almacenados: "+ e.cantLibrosAlmacenados());
         System.out.println("Titulo a buscar: ");
         System.out.print(e.buscarLibro(Lector.leerString())); 
-        
         
     }
 }
