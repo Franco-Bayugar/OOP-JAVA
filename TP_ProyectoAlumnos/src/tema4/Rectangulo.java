@@ -41,6 +41,11 @@ public class Rectangulo extends Figura{
         return (2*getBase()+2*getAltura());
     }
     
+    @Override
+    public void despintar(){
+        super.despintar();
+    }
+    
     public String toString(){
        String aux = super.toString() + 
                     " Base: " + getBase() +

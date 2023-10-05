@@ -7,22 +7,25 @@ package tema4;
 
 
 public abstract class Figura {
-    private String colorRelleno;
+    private String colorRelleno; //variables
     private String colorLinea;
-   
-    public Figura(String unCR, String unCL){
+    
+    //constructor
+    public Figura(String unCR, String unCL){ 
         setColorRelleno(unCR);
         setColorLinea(unCL);
     }
     
-    public String toString(){
+    //metodo string con this para el metodo de la clase que los intancie
+    public String toString(){ 
         String aux = "Area: " + this.calcularArea() +
+                     " Perimetro: " + this.calcularPerimetro() + 
                      " CR: "  + getColorRelleno() + 
-                      " CL: " + getColorLinea();             
-             return aux;
+                     " CL: " + getColorLinea();             
+        return aux;
        }
 
-    
+    //getters and setters
     public String getColorRelleno(){
         return colorRelleno;       
     }
@@ -36,7 +39,14 @@ public abstract class Figura {
         colorLinea = unColor;       
     }
     
-    public abstract double calcularArea();
+    //metodos que settean
+    public void despintar(){
+        this.setColorLinea("Negro");
+        this.setColorRelleno("Blanco");
+    }
+    
+    //metodos vacios
+    public abstract double calcularArea();  
     public abstract double calcularPerimetro();
      
 }

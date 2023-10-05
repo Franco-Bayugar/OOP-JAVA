@@ -8,7 +8,6 @@ public class Cuadrado extends Figura{
     public Cuadrado(double unLado, String unColorR, String unColorL){
         super(unColorR,unColorL);
         setLado(unLado);
-
     } 
     
     public double getLado(){
@@ -25,6 +24,11 @@ public class Cuadrado extends Figura{
     
     public double calcularPerimetro(){
        return (getLado()*4);
+    }
+    
+    @Override
+    public void despintar(){
+        super.despintar();
     }
     
     public String toString(){
