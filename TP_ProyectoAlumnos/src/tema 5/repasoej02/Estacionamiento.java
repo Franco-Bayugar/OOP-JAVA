@@ -11,7 +11,6 @@ public class Estacionamiento {
     private int horaApertura;
     private int horaCierre;
     private Auto[][] matrizEstacionamiento;
-    private Auto A;
     private int piso, plaza;
 
     public Estacionamiento(String nombre, String direccion) { //CONSTRUCTOR 1
@@ -46,59 +45,39 @@ public class Estacionamiento {
         }
     }
 
-    public int getPiso() {
-        return piso;
-    }
-
-    public void setPiso(int piso) {
-        this.piso = piso;
-    }
-
-    public int getPlaza() {
-        return plaza;
-    }
-
-    public void setPlaza(int plaza) {
-        this.plaza = plaza;
-    }
-
-    
-    
-    public String getNombre() {
-        return nombre;
-    }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getDireccion() {
-        return direccion;
     }
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
 
-    public int getHoraApertura() {
-        return horaApertura;
-    }
-
     public void setHoraApertura(int horaApertura) {
         this.horaApertura = horaApertura;
-    }
-
-    public int getHoraCierre() {
-        return horaCierre;
     }
 
     public void setHoraCierre(int horaCierre) {
         this.horaCierre = horaCierre;
     }
 
- 
-    
-    
+    public void setPiso(int piso) {
+        this.piso = piso;
+    }
+
+    public void setPlaza(int plaza) {
+        this.plaza = plaza;
+    }
+
+    public int getPiso() {
+        return piso;
+    }
+
+    public int getPlaza() {
+        return plaza;
+    }
+
+
     //METHODS
 
     public void ingresarAuto(Auto A, int X, int Y){ //instanciar auto???????
@@ -108,7 +87,7 @@ public class Estacionamiento {
     public String retornarAuto(String unaPatente){
         for(int i=0;i<this.getPiso();i++){
             for(int j=0;j<this.getPlaza();j++){
-                if(this.existeAuto(i, j) && this.matrizEstacionamiento[i][j].getPatente().equals(unaPatente)){
+                if(this.existeAuto(i, j)&& this.matrizEstacionamiento[i][j].getPatente().equals(unaPatente)){
                     return "Auto encontrado ||| Piso: "+i+" Plaza: "+j;
                 } 
             }
@@ -116,10 +95,9 @@ public class Estacionamiento {
     }
 
     private boolean existeAuto(int x,int y){
-         if(this.matrizEstacionamiento[x][y] != null){
-             return true;
-         } else {return false;}
+         return(this.matrizEstacionamiento[x][y] != null);
     }
+    
     @Override
     public String toString() {  //REVISAR!!!!!!!
         String aux ="";
@@ -141,7 +119,7 @@ public class Estacionamiento {
     
     public int sumaPlazas(int Y){ //quiero saber las plazas, entonces en plaza me quedo fijo y muevo en pisos
         int total = 0;
-        for(int i=0;i<this.getPlaza();i++){
+        for(int i=0;i<this.getPiso();i++){
             if(this.matrizEstacionamiento[i][Y] != null){
                 total++;
             }

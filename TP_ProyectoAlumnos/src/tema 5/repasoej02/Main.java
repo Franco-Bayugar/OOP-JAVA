@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         //String nombre, String direccion, int hA, int hC, int N, int M
-        Estacionamiento E = new Estacionamiento("Estacionamiento24hs", "San Martin 999", 8, 21, 3, 3);
+        Estacionamiento E = new Estacionamiento("Estacionamiento24hs", "San Martin 999", 8, 21, 5, 3);
         GeneradorAleatorio.iniciar();
         
         Auto A1 = new Auto("Franco Martinez", "GFK 274");
@@ -17,13 +17,13 @@ public class Main {
         Auto A4 = new Auto("Sebastian Poloi", "VCX 645");
         Auto A5 = new Auto("Alberto Marolo", "FEW 642");
         Auto A6 = new Auto("Paulo Piuz", "POI 987");
-
+        // {0, 1, 2}
         E.ingresarAuto(A1, 0, 0);
-        E.ingresarAuto(A2, 0, 1);
-        E.ingresarAuto(A3, 0, 2);
-        E.ingresarAuto(A4, 1, 1);
-        E.ingresarAuto(A5, 2, 2);
-        E.ingresarAuto(A6, 1, 2);
+        E.ingresarAuto(A2, 1, 0);
+        E.ingresarAuto(A3, 2, 0);
+        E.ingresarAuto(A4, 3, 0);
+        E.ingresarAuto(A5, 4, 0);
+        E.ingresarAuto(A6, 2, 2);
         
        System.out.println("=====PRINTEO ESTACIONAMIENTO======");
        System.out.println(E.toString());
@@ -35,9 +35,6 @@ public class Main {
        System.out.println("=====BUSCAR AUTO EN ESTACIONAMIENTO======");
        System.out.println(E.retornarAuto(Lector.leerString()));
        
-
-        
-
     }
     
 }

@@ -13,21 +13,22 @@ public class Auto {
     public Auto() {
     }
 
-    public String getNombreDueno() {
-        return nombreDueno;
-    }
-
     public void setNombreDueno(String nombreDueno) {
         this.nombreDueno = nombreDueno;
+    }
+
+    public void setPatente(String patente) {
+        this.patente = patente;
+    }
+
+    public String getNombreDueno() {
+        return nombreDueno;
     }
 
     public String getPatente() {
         return patente;
     }
 
-    public void setPatente(String patente) {
-        this.patente = patente;
-    }
 
     @Override
     public String toString() {
